@@ -1,74 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{% static '../../CSS/index.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reconocimiento de Asistencia</title>
-    <link rel="stylesheet" href="../../CSS/estilo.css">
-</head>
-<body>
-    <h1>Reconocimiento de Asistencia</h1>
-    <video id="video" width="640" height="480" autoplay></video>
-    <button id="capture">Capturar Asistencia</button>
-    <canvas id="canvas" style="display: none"></canvas>
-    <script>
-      const video = document.getElementById("video");
-
-      if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices
-          .getUserMedia({ video: true })
-          .then(function (stream) {
-            video.srcObject = stream;
-          })
-          .catch(function (err0r) {
-            console.log("Algo salió mal al acceder a la cámara: " + err0r);
-          });
-      }
-
-      function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== "") {
-          const cookies = document.cookie.split(";");
-          for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === name + "=") {
-              cookieValue = decodeURIComponent(
-                cookie.substring(name.length + 1)
-              );
-              break;
-            }
-          }
-        }
-        return cookieValue;
-      }
-
-      const csrftoken = getCookie("csrftoken");
-
-      const captureButton = document.getElementById("capture");
-      const canvas = document.getElementById("canvas");
-      captureButton.addEventListener("click", () => {
-        const context = canvas.getContext("2d");
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const image_data = canvas.toDataURL("image/png");
-
-        fetch("/asistencia/capturar/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "X-CSRFToken": csrftoken,
-          },
-          body: `image_data=${encodeURIComponent(image_data)}`,
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            alert(data.message);
-          })
-          .catch((error) => {
-            console.error("Error al enviar la imagen: ", error);
-          });
-      });
-    </script>
-</body>
+  </head>
+  <body>
+    <main class="ini-input">
+      <div class="centro">
+        <form action="" method="post">
+          <img src="../../img/mlogo.png" style="height: 20%; width: 20%;"><br>
+          <hr class="hrcolor">
+          <div style="color: white;">Inicio sesión</div>
+          <div><input class="ini-input" name="usuario" id="iusuario" type="text" placeholder="Usuario"></div><br>
+          <div><input class="ini-input" name="pass" id="ipass" type="password" placeholder="Contraseña"></div><br>
+          <div><input type="checkbox" name="show" id="ishow" onclick="toggle()"><label for="ishow" style="color: white;">Ver contraseña</label></div>
+          <hr class="hrcolor">
+          <div class="centrar">
+            <button class="ini-input" type="submit">Iniciar sesión</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
