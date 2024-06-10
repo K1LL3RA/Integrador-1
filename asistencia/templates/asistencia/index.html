@@ -1,28 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static '../../CSS/index.css' %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reconocimiento de Asistencia</title>
-  </head>
-  <body>
+</head>
+<body>
     <main class="ini-input">
-      <div class="centro">
-        <form action="" method="post">
-          <img src="{% static 'img/mlogo.png' %}" style="height: 20%; width: 20%;"><br>
-          <hr class="hrcolor">
-          <div style="color: white;">Inicio sesión</div>
-          <div><input class="ini-input" name="usuario" id="iusuario" type="text" placeholder="Usuario"></div><br>
-          <div><input class="ini-input" name="pass" id="ipass" type="password" placeholder="Contraseña"></div><br>
-          <div><input type="checkbox" name="show" id="ishow" onclick="toggle()"><label for="ishow" style="color: white;">Ver contraseña</label></div>
-          <hr class="hrcolor">
-          <div class="centrar">
-            <button class="ini-input" type="submit">Iniciar sesión</button>
-          </div>
-        </form>
-      </div>
+        <div class="centro">
+            <form action="" method="post">
+                <img src="{% static '../../img/mlogo.png' %}" style="height: 20%; width: 20%;"><br>
+                <hr class="hrcolor">
+                <div style="color: white;">Inicio sesión</div>
+                <div><input class="ini-input" name="usuario" id="iusuario" type="text" placeholder="Usuario"></div><br>
+                <div><input class="ini-input" name="pass" id="ipass" type="password" placeholder="Contraseña"></div><br>
+                <div><input type="checkbox" name="show" id="ishow" onclick="toggle()"><label for="ishow" style="color: white;">Ver contraseña</label></div>
+                <hr class="hrcolor">
+                <div class="centrar">
+                    <button class="ini-input" type="submit">Iniciar sesión</button>
+                </div>
+            </form>
+        </div>
     </main>
-  </body>
+</body>
 </html>

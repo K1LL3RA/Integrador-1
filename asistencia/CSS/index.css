@@ -1,61 +1,70 @@
 /* styles.css */
-body{
-	background: #0d0e1c;
-	align-items: center;
-	align-content: center;
-	font-family: Arial;
+body {
+    background: #0d0e1c;
+    align-items: center;
+    align-content: center;
+    font-family: Arial;
 }
-.centrar{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+.centrar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.ini-input{
-	align-content: center;
-	align-items: center;
-	padding: 9% 0;
+
+.ini-input {
+    align-content: center;
+    align-items: center;
+    padding: 9% 0;
 }
-hr.hrcolor{
-	border: none;
-	border-top: 2px solid #0d0e1c;
+
+hr.hrcolor {
+    border: none;
+    border-top: 2px solid #0d0e1c;
 }
-.centro{
-	border-radius: 25px;
-	background: #272a54;
-	margin: auto;
-	padding: 1%;
-	width: 500px;
+
+.centro {
+    border-radius: 25px;
+    background: #272a54;
+    margin: auto;
+    padding: 1%;
+    width: 500px;
 }
-input.ini-input{
-	color: white;
-	font-size: 15px;
-	padding: 12px 20px;
-	width: 100%;
-	margin: 8px 0;
-	box-sizing: border-box;
-	background-color: #272a54;
-	border: none;
-	border-bottom: 2px solid white;
+
+input.ini-input {
+    color: white;
+    font-size: 15px;
+    padding: 12px 20px;
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #272a54;
+    border: none;
+    border-bottom: 2px solid white;
 }
-input:focus.ini-input{
-	background-color: #0d0e1c;
+
+input:focus.ini-input {
+    background-color: #0d0e1c;
 }
-label.ini-input{
-	font-weight: bold;
+
+label.ini-input {
+    font-weight: bold;
 }
-button[type="submit"].ini-input{
-	border: none;
-	background-color: #fac657;
-	border-radius: 10px;
-	text-align: center;
-	align-items: center;
-	width: 80%;
-	font-size: 15px;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
+
+button[type="submit"].ini-input {
+    border: none;
+    background-color: #fac657;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    font-size: 15px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }
-button[type="submit"]:hover.ini-input{
-	background-color: #bf9845;
+
+button[type="submit"]:hover.ini-input {
+    background-color: #bf9845;
 }
