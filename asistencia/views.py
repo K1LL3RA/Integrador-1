@@ -85,5 +85,6 @@ def vista_alumnos(request):
 def lobby_view(request):
     return render(request, 'asistencia/lobby.html')
 
-
+def index_view(request):
+    return render(request, 'asistencia/index.html')
 
