@@ -82,5 +82,8 @@ def vista_alumnos(request):
     usuarios = Usuario.objects.all()
     return render(request, 'asistencia/alumnos.html', {'usuarios': usuarios})
 
+def lobby_view(request):
+    return render(request, 'asistencia/lobby.html')
+
 
 
