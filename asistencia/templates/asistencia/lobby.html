@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div class="vertical centrar" style="align-items: start;">
+		<form id="login" method="post">
 		<div style="width: 20%; text-align: center;" class="contUnitario">
 				<div><src="{% static '../../img/genericst.jpg' %}" style="width: 30%; border-radius: 50%;"></div>
 				<hr class="hrcolor">
@@ -19,7 +20,7 @@
 				<hr class="hrcolor">
 				<button>Volver</button>	
 		</div>
-
+		</form>
 		<div style="width: 75%; height: 600px;">
 			<table class="estestudiantes">
 		<div style="width: 20%; text-align: center;" class="contUnitario1">
@@ -62,5 +63,12 @@
 		</table>	
 		</div>
 	</div>
+	<script>
+        document.getElementById('login').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí puedes realizar validaciones adicionales
+            window.location.href = '/asistencia/templates/asistencia/index.html';
+        });
+    </script>
 </body>
 </html>
