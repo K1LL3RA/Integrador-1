@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static '../../CSS/cont.css' %}">
+	<title>Autoregistro</title>
+</head>
+<body>
+	<div class="vertical">
+		<div class="cont">
+			<div><button type="button">volver</button></div><br>
+			<div class="centrar"><img style="height: 425px; width: 425px; background-color: #0d0e1c;"></div><br>
+			<button type="button">Iniciar servicio</button>
+		</div>
+		<div class="cont">
+			<div class="centrar"><img src="assets/img/genericst.jpg" style="height: 300px; width: 300px; background-color: #0d0e1c; border: none; border-radius: 25px;"></div>
+			<div class="textob">
+				Nombres: <br>
+				Apellidos: <br>
+				DNI: <br>
+				Año escolar: <br>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="textob centrar">Nombre del curso</div>
+			<hr>
+			<div class="estestudiantes">
+				<table class="estestudiantes">
+					<tr>
+						<th>Alumno</th>
+						<th>Estado</th>
+					</tr>
+					<tr>
+						<td>Alumno 1</td>
+						<td>Conectado</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

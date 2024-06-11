@@ -1,0 +1,128 @@
+body{
+	background: #0d0e1c;
+	font-family: Arial;
+}
+.vertical{
+	overflow: hidden;
+	height: 100%;
+}
+.cont{
+	width: 450px;
+	height: 600px;
+	background: #272a54;
+	margin: 1em;
+	padding: 1%;
+	float: left;
+	border-radius: 25px;
+}
+.contUnitario{
+	background: #272a54;
+	margin: 1em;
+	padding: 1%;
+	float: left;
+	border-radius: 25px;
+}
+.centrar{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.textob{
+	color: white;
+}
+button{
+	cursor: pointer;
+	border: none;
+	background-color: #fac657;
+	border-radius: 10px;
+	padding: 12px 20px;
+	margin: 8px 0;
+}
+button:hover{
+	background-color: #bf9845;
+}
+.estestudiantes{
+	overflow: auto;
+}
+.estestudiantes table{
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px solid white;
+}
+.estestudiantes td, .estestudiantes th{
+	border: none;
+	padding: 8px 25px;
+}
+.estestudiantes th{
+	font-size: 25px;
+	background-color: #080814;
+	color: white;
+}
+.estestudiantes td{
+	background-color: #303030;
+	color: white;
+}
+.estestudiantes tr:nth-child(odd) td{
+	background-color: #474747;
+}
+hr.hrcolor{
+	border: none;
+	border-top: 2px solid #0d0e1c;
+}
+/* The switch - the box around the slider */
+.switch{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Ocultar checkbox default */
+.switch input{
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #0d0e1c;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: #272a54;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+input:checked + .slider {
+	background-color: #fac657;
+}
+input:focus + .slider {
+	box-shadow: 0 0 1px #fac657;
+}
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+	background-color: #fc960f;
+}
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+.slider.round:before {
+	border-radius: 50%;
+}
